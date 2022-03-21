@@ -1,0 +1,26 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+
+    function quadradosHorizontal(x, y, tamanhox, tamanhoy, cor, quantidade){
+            var numeroQuadrados=0
+        while(numeroQuadrados<quantidade){
+            pincel.fillStyle = cor;
+            pincel.fillRect(x,y,tamanhox,tamanhoy,cor);
+            pincel.strokeRect(x,y,tamanhox,tamanhoy)
+            x+=tamanhox;
+            numeroQuadrados++;
+        }
+    }
+
+quadradosHorizontal(0,0,100,100,"green",3);
+
+quadradosHorizontal(300,0,100,100,"white",1);
+
+</script>
